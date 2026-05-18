@@ -35,7 +35,7 @@ Use the exact commit message from the corresponding plan/step-XX-*.md file.
 5. Commit with the exact message from the table above
 6. Push: git push origin main
 
-Do not start the next step until the current step is committed.
+Do not start the next step until the current step is committed and pushed.
 
 ## Branch
 
