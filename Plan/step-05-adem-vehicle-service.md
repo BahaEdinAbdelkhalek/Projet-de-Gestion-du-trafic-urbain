@@ -1,6 +1,6 @@
-# Step 5 - Baha: Vehicle Service
+# Step 5 - Adem: Vehicle Service
 
-**Commit message:** `Baha: implement vehicle service`
+**Commit message:** `Adem: implement vehicle service`
 
 ---
 
@@ -50,5 +50,5 @@ npm run dev --workspace services/vehicles
 
 ```
 git add .
-git commit -m "Baha: implement vehicle service"
+git commit -m "Adem: implement vehicle service"
 ```

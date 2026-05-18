@@ -43,19 +43,18 @@ I'm working on a Node.js microservices project called "Smart Traffic Platform". 
 - Mark notification as read
 
 ## What is already done (DO NOT redo these)
-- Steps 1-4 are done by Adem (setup, base middleware, auth service, service auth middleware)
+- Steps 1-5 are done by Adem (setup, base middleware, auth service, service auth middleware, vehicles)
 
 ## My steps to implement (in order)
-1. Step 5: Vehicle service -> Baha: implement vehicle service
-2. Step 6: Traffic service -> Baha: implement traffic service
-3. Step 7: Incident service -> Baha: implement incident service
+1. Step 6: Traffic service -> Baha: implement traffic service
+2. Step 7: Incident service -> Baha: implement incident service
+3. Step 8: Notification service -> Baha: implement notification service
 4. Step 9: GraphQL gateway -> Baha: implement graphql gateway
 5. Step 11: Docs and sample queries -> Baha: add docs and sample queries
 6. Step 12: Unit tests -> Baha: add unit tests
 
 ## IMPORTANT - Between my steps, Adem will do his commits
-- Adem completes Steps 1-4 before I start
-- After my Step 7, Adem does Step 8 (notification service)
+- Adem completes Steps 1-5 before I start
 - After my Step 9, Adem does Step 10 (gateway auth and role guards)
 
 ## Rules - READ THESE BEFORE WRITING ANY CODE
@@ -91,8 +90,8 @@ Read all 3 files in Plan/Rules:
 6. Commit: git add . && git commit -m "Baha: exact message from plan"
 7. Push: git push origin main
 
-## Start with Step 5 now
-Read Plan/step-05-you-vehicle-service.md and implement it.
+## Start with Step 6 now
+Read Plan/step-06-baha-traffic-service.md and implement it.
 ```
 
 ---
@@ -103,7 +102,7 @@ Read Plan/step-05-you-vehicle-service.md and implement it.
 - Plan/Rules/coding-style.md
 - Plan/Rules/git-workflow.md
 - Plan/Rules/architecture.md
-- Plan/step-05-you-vehicle-service.md
+- Plan/step-06-baha-traffic-service.md
 - Plan/Ticket/Mini_Projet_Web_Services_GraphQL.pdf
 
 ### Files to expand as reference

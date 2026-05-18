@@ -17,10 +17,10 @@ Use the exact commit message from the corresponding plan/step-XX-*.md file.
 | 2 | Adem | Adem: add base service middleware and db config |
 | 3 | Adem | Adem: implement auth service |
 | 4 | Adem | Adem: add service auth middleware |
-| 5 | Baha | Baha: implement vehicle service |
+| 5 | Adem | Adem: implement vehicle service |
 | 6 | Baha | Baha: implement traffic service |
 | 7 | Baha | Baha: implement incident service |
-| 8 | Adem | Adem: implement notification service |
+| 8 | Baha | Baha: implement notification service |
 | 9 | Baha | Baha: implement graphql gateway |
 | 10 | Adem | Adem: add gateway auth and role guards |
 | 11 | Baha | Baha: add docs and sample queries |

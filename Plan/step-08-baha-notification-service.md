@@ -1,6 +1,6 @@
-# Step 8 - Adem: Notification Service
+# Step 8 - Baha: Notification Service
 
-**Commit message:** `Adem: implement notification service`
+**Commit message:** `Baha: implement notification service`
 
 ---
 
@@ -42,5 +42,5 @@ npm run dev --workspace services/notifications
 
 ```
 git add .
-git commit -m "Adem: implement notification service"
+git commit -m "Baha: implement notification service"
 ```
