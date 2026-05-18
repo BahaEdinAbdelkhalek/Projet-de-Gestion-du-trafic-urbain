@@ -8,10 +8,10 @@
 
 Create the shared base for all REST services: DB connection (Sequelize), error handling, validation middleware, and Express app/server setup.
 
-## Files to create in EACH service
+## Files to create
 
 ```
-config/db.js
+shared/db.js
 middleware/errorMiddleware.js
 middleware/validateMiddleware.js
 utils/HttpError.js
@@ -19,7 +19,7 @@ app.js
 server.js
 ```
 
-## config/db.js (Sequelize singleton)
+## shared/DBconfig.js (Sequelize singleton)
 
 ```js
 const { Sequelize } = require('sequelize');
@@ -138,7 +138,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = require('./app');
-const sequelize = require('./config/db');
+const sequelize = require('../../shared/DBconfig');
 
 const PORT = process.env.PORT || 4001;
 
