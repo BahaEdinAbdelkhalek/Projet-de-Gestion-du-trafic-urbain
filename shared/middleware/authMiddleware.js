@@ -15,6 +15,7 @@ const protect = asyncHandler(async (req, res, next) => {
     req.user = decoded;
     next();
   } catch (err) {
+    console.error('JWT verification failed:', err.message);
     throw new HttpError('Not authorized, token invalid', 401);
   }
 });
