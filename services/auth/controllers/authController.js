@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const HttpError = require('../../../shared/utils/HttpError');
 const User = require('../models/User');
-const generateToken = require('../utils/generateToken');
+const generateToken = require('../../../shared/utils/generateToken');
 
 // @desc    Register a new user
 // @route   POST /api/auth/register
