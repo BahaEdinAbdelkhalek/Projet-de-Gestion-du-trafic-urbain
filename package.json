@@ -1,0 +1,21 @@
+{
+  "name": "traffic-platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "start": "npm run dev:all",
+    "dev:all": "concurrently -n gateway,auth,vehicles,traffic,incidents,notifications \"npm run dev --workspace apps/gateway\" \"npm run dev --workspace services/auth\" \"npm run dev --workspace services/vehicles\" \"npm run dev --workspace services/traffic\" \"npm run dev --workspace services/incidents\" \"npm run dev --workspace services/notifications\"",
+    "dev:gateway": "npm run dev --workspace apps/gateway",
+    "dev:auth": "npm run dev --workspace services/auth",
+    "dev:vehicles": "npm run dev --workspace services/vehicles",
+    "dev:traffic": "npm run dev --workspace services/traffic",
+    "dev:incidents": "npm run dev --workspace services/incidents",
+    "dev:notifications": "npm run dev --workspace services/notifications"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
