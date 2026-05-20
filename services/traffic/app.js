@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Routes go here
+const trafficRoutes = require('./routes/traffic');
+app.use('/api/traffic', trafficRoutes);
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });

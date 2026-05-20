@@ -13,9 +13,13 @@
     "dev:vehicles": "npm run dev --workspace services/vehicles",
     "dev:traffic": "npm run dev --workspace services/traffic",
     "dev:incidents": "npm run dev --workspace services/incidents",
-    "dev:notifications": "npm run dev --workspace services/notifications"
+    "dev:notifications": "npm run dev --workspace services/notifications",
+    "test": "npm test --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "sqlite3": "^6.0.1"
   }
 }
