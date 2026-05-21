@@ -17,22 +17,22 @@ describe('Auth service', () => {
     const res = await request(app)
       .post('/api/auth/register')
       .send({
-        name: 'أمين العياري',
-        email: 'amine@exemple.tn',
+        name: ' admin',
+        email: 'admin@exemple.tn',
         password: '123456',
         role: 'ADMIN',
       });
 
     expect(res.status).toBe(201);
     expect(res.body.token).toBeTruthy();
-    expect(res.body.user.email).toBe('amine@exemple.tn');
+    expect(res.body.user.email).toBe('admin@exemple.tn');
   });
 
   test('logs in a user', async () => {
     const res = await request(app)
       .post('/api/auth/login')
       .send({
-        email: 'amine@exemple.tn',
+        email: 'admin@exemple.tn',
         password: '123456',
       });
 

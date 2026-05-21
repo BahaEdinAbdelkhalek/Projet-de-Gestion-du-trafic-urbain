@@ -9,7 +9,7 @@ Set `Authorization: Bearer <token>` header for all authenticated operations.
 ### Register
 ```graphql
 mutation {
-  register(name: "أمين العياري", email: "amine@exemple.tn", password: "123456", role: "ADMIN") {
+  register(name: "Admin", email: "admin@test.com", password: "123456", role: "ADMIN") {
     token
     user { id name email role }
   }
@@ -19,7 +19,7 @@ mutation {
 ### Login
 ```graphql
 mutation {
-  login(email: "amine@exemple.tn", password: "123456") {
+  login(email: "admin@test.com", password: "123456") {
     token
     user { id name email role }
   }
@@ -42,7 +42,7 @@ query {
 ### Create Vehicle
 ```graphql
 mutation {
-  createVehicle(plateNumber: "تونس-123-ب", type: "تاكسي", model: "سيارة بلدية", status: "نشط") {
+  createVehicle(plateNumber: "TN-123-AB", type: "car", model: "Toyota", status: "active") {
     id plateNumber type model status
   }
 }
@@ -82,7 +82,7 @@ query {
 ### Create Zone
 ```graphql
 mutation {
-  createTrafficZone(name: "باب الخضراء", description: "وسط العاصمة تونس", coordinates: "36.806,10.171") {
+  createTrafficZone(name: "Zone A", description: "City center", coordinates: "36.8,10.1") {
     id name description
   }
 }
@@ -122,7 +122,7 @@ query {
 ### Create Incident
 ```graphql
 mutation {
-  createIncident(type: "accident", description: "تصادم خفيف بين سيارتين", location: "طريق حلق الوادي", zoneId: "1") {
+  createIncident(type: "accident", description: "Two cars collision", location: "Djerba main road", zoneId: "1") {
     id type status location
   }
 }
@@ -153,7 +153,7 @@ mutation {
 ### Send Notification
 ```graphql
 mutation {
-  sendNotification(recipientId: "1", title: "تنبيه", message: "ازدحام كبير في باب الخضراء") {
+  sendNotification(recipientId: "1", title: "Alert", message: "High congestion in Zone A") {
     id title message isRead
   }
 }

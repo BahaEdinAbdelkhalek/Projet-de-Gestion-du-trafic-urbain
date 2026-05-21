@@ -23,14 +23,14 @@ describe('Vehicles service', () => {
       .post('/api/vehicles')
       .set('Authorization', `Bearer ${token}`)
       .send({
-        plateNumber: 'تونس-123-ب',
-        type: 'تاكسي',
-        model: 'سيارة بلدية',
-        status: 'نشط',
+        plateNumber: 'TN-123-AB',
+        type: 'taxi',
+        model: 'municipal car',
+        status: 'active',
       });
 
     expect(res.status).toBe(201);
-    expect(res.body.plateNumber).toBe('تونس-123-ب');
+    expect(res.body.plateNumber).toBe('TN-123-AB');
   });
 
   test('lists vehicles', async () => {

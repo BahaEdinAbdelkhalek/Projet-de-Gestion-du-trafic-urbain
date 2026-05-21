@@ -15,7 +15,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\"name\":\"أمين العياري\",\"email\":\"amine@exemple.tn\",\"password\":\"123456\",\"role\":\"ADMIN\"}"
+              "raw": "{\"name\":\"Admin\",\"email\":\"admin@test.com\",\"password\":\"123456\",\"role\":\"ADMIN\"}"
             }
           }
         },
@@ -27,7 +27,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\"email\":\"amine@exemple.tn\",\"password\":\"123456\"}"
+              "raw": "{\"email\":\"admin@test.com\",\"password\":\"123456\"}"
             }
           }
         },
@@ -55,7 +55,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"plateNumber\":\"تونس-123-ب\",\"type\":\"تاكسي\",\"model\":\"سيارة بلدية\",\"status\":\"نشط\"}"
+              "raw": "{\"plateNumber\":\"TN-123-AB\",\"type\":\"taxi\",\"model\":\"municipal car\",\"status\":\"active\"}"
             }
           }
         },
@@ -106,7 +106,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"name\":\"باب الخضراء\",\"description\":\"وسط العاصمة تونس\",\"coordinates\":\"36.806,10.171\"}"
+              "raw": "{\"name\":\"Zone A\",\"description\":\"City center\",\"coordinates\":\"36.8,10.1\"}"
             }
           }
         },
@@ -149,7 +149,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"type\":\"accident\",\"description\":\"تصادم خفيف\",\"location\":\"طريق المرسى\"}"
+              "raw": "{\"type\":\"accident\",\"description\":\"Collision\",\"location\":\"Djerba road\"}"
             }
           }
         },
@@ -192,7 +192,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"recipientId\":1,\"title\":\"تنبيه\",\"message\":\"ازدحام كبير في باب الخضراء\"}"
+              "raw": "{\"recipientId\":1,\"title\":\"Alert\",\"message\":\"High congestion\"}"
             }
           }
         },
