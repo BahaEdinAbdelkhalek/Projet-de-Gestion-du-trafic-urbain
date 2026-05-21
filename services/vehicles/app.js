@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const { notFound, errorHandler } = require('../../shared/middleware/errorMiddleware');
+const vehicleRoutes = require('./routes/vehicles');
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Routes go here
+app.use('/api/vehicles', vehicleRoutes);
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
