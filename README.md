@@ -56,7 +56,7 @@ http://localhost:4000/graphql
 ### Register
 ```graphql
 mutation {
-  register(name: "Admin", email: "admin@test.com", password: "123456", role: "ADMIN") {
+  register(name: "آمنة بن سالم", email: "amina@exemple.tn", password: "123456", role: "ADMIN") {
     token
     user { id name email role }
   }
@@ -66,7 +66,7 @@ mutation {
 ### Login
 ```graphql
 mutation {
-  login(email: "admin@test.com", password: "123456") {
+  login(email: "amina@exemple.tn", password: "123456") {
     token
     user { id name role }
   }
@@ -85,11 +85,19 @@ query {
 ### Create Traffic Zone
 ```graphql
 mutation {
-  createTrafficZone(name: "Zone A", description: "City center", coordinates: "36.8,10.1") {
+  createTrafficZone(name: "حي البحيرة", description: "منطقة البحيرة في تونس", coordinates: "36.839,10.212") {
     id name congestionLevel
   }
 }
 ```
+
+## Tests
+
+1. Create a test database (e.g. `traffic_test`) and update `.env.test` if needed.
+2. Run tests:
+   ```bash
+   npm test
+   ```
 
 ## Team
 

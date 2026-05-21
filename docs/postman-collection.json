@@ -15,7 +15,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\"name\":\"Admin\",\"email\":\"admin@test.com\",\"password\":\"123456\",\"role\":\"ADMIN\"}"
+              "raw": "{\"name\":\"أمين العياري\",\"email\":\"amine@exemple.tn\",\"password\":\"123456\",\"role\":\"ADMIN\"}"
             }
           }
         },
@@ -27,7 +27,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\"email\":\"admin@test.com\",\"password\":\"123456\"}"
+              "raw": "{\"email\":\"amine@exemple.tn\",\"password\":\"123456\"}"
             }
           }
         },
@@ -36,6 +36,57 @@
           "request": {
             "method": "GET",
             "url": "http://localhost:4100/api/auth/me",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vehicles",
+      "item": [
+        {
+          "name": "Create Vehicle",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:4200/api/vehicles",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"plateNumber\":\"تونس-123-ب\",\"type\":\"تاكسي\",\"model\":\"سيارة بلدية\",\"status\":\"نشط\"}"
+            }
+          }
+        },
+        {
+          "name": "Get Vehicles",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:4200/api/vehicles",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Add Position",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:4200/api/vehicles/1/positions",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"latitude\":36.8,\"longitude\":10.18,\"speed\":60}"
+            }
+          }
+        },
+        {
+          "name": "Get Positions",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:4200/api/vehicles/1/positions",
             "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
           }
         }
@@ -55,7 +106,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"name\":\"Zone A\",\"description\":\"City center\",\"coordinates\":\"36.8,10.1\"}"
+              "raw": "{\"name\":\"باب الخضراء\",\"description\":\"وسط العاصمة تونس\",\"coordinates\":\"36.806,10.171\"}"
             }
           }
         },
@@ -98,7 +149,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"type\":\"accident\",\"description\":\"Collision\",\"location\":\"Djerba road\"}"
+              "raw": "{\"type\":\"accident\",\"description\":\"تصادم خفيف\",\"location\":\"طريق المرسى\"}"
             }
           }
         },
@@ -141,7 +192,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"recipientId\":1,\"title\":\"Alert\",\"message\":\"High congestion\"}"
+              "raw": "{\"recipientId\":1,\"title\":\"تنبيه\",\"message\":\"ازدحام كبير في باب الخضراء\"}"
             }
           }
         },
