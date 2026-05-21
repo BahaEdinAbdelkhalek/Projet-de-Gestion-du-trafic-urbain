@@ -14,9 +14,12 @@
     "dev:traffic": "npm run dev --workspace services/traffic",
     "dev:incidents": "npm run dev --workspace services/incidents",
     "dev:notifications": "npm run dev --workspace services/notifications",
-    "test": "npm test --workspaces --if-present"
+    "test": "jest --runInBand"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }
