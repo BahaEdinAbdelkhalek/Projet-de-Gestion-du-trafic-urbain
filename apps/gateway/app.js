@@ -11,6 +11,7 @@ const VehicleService = require('./datasources/vehicleService');
 const TrafficService = require('./datasources/trafficService');
 const IncidentService = require('./datasources/incidentService');
 const NotificationService = require('./datasources/notificationService');
+const { getTokenFromRequest, getUserFromToken } = require('./utils/auth');
 
 const app = express();
 
@@ -27,10 +28,11 @@ const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
   context: ({ req }) => {
-    const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ') ? authHeader.split(' ')[1] : null;
+    const token = getTokenFromRequest(req);
+    const user = getUserFromToken(token);
     return {
       token,
+      user,
       dataSources: {
         authService: new AuthService(token),
         vehicleService: new VehicleService(token),
